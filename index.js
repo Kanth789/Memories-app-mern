@@ -16,7 +16,7 @@ app.use('/posts',router)
 app.use('/user',userRouters)
 
 mongoose.connect(process.env.CONNECT_URL)
-.then(()=> app.listen(process.env.PORT,()=>console.log('DB connected')))
+.then(()=> app.listen(process.env.PORT || 5000,()=>console.log('DB connected')))
 .catch(err=>console.log(err))
 
 
